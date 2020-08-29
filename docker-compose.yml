@@ -1,0 +1,9 @@
+version: '3'
+services:
+  app:
+    # build: .
+    image: teruzoufox/ubuntu-docker
+    container_name: ubuntu-docker.app
+    tty: true
+    volumes:
+      - ./share:/share
