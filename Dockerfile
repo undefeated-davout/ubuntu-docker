@@ -27,6 +27,7 @@ RUN apt update && \
     unzip \
     vim \
     wget \
+    xsel \
   && apt-get clean \
   && apt autoremove && apt autoclean
 
