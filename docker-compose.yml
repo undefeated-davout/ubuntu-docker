@@ -4,5 +4,6 @@ services:
     build: .
     container_name: ubuntu.app
     tty: true
+    privileged: true
     volumes:
       - ./share:/share
