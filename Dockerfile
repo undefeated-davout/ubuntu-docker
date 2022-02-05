@@ -28,13 +28,15 @@ RUN apt update && \
   && apt-get clean \
   && apt autoremove && apt autoclean
 
+# bash設定
+COPY ./config/.bashrc .
+RUN cat .bashrc >> ~/.bashrc
+RUN rm .bashrc
+
 # 日本語設定
 RUN locale-gen ja_JP.UTF-8
-RUN echo export LANG=ja_JP.UTF-8 >> ~/.bashrc
 
 # tmux設定
-RUN echo "set-option -g mouse on\n\
-set -g terminal-overrides 'xterm*:smcup@:rmcup@'\n\
-" > ~/.tmux.conf
+COPY ./config/.tmux.conf /root/.tmux.conf
 
 WORKDIR /share
