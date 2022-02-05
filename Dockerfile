@@ -15,6 +15,7 @@ RUN apt update && \
     isc-dhcp-client \
     language-pack-ja \
     language-pack-ja-base \
+    less \
     netcat-openbsd \
     procps \
     python3 \
