@@ -1,19 +1,15 @@
-# 使い方
-## Dockerコマンド
-#### 以下、cloneしたディレクトリ直下にてコマンド実行
+# Ubuntu Docker
 
-```$xslt
-$ docker-compose build
+## 使い方
+
+### 実行
+
+```.bash
+docker-compose up -d
 ```
 
-#### 実行
+### コンテナ内へログイン
 
-```$xslt
-$ docker-compose up -d
-```
-
-#### コンテナ内へログイン
-
-```$xslt
-$ docker exec -it ubuntu-docker.app /bin/bash
+```.bash
+docker exec -it ubuntu.app /bin/bash --login
 ```
