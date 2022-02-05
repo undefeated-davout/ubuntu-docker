@@ -4,6 +4,7 @@ RUN apt update && \
   DEBIAN_FRONTEND=noninteractive apt install --no-install-recommends -y \
     bash \
     bind9-dnsutils \
+    ca-certificates \
     coreutils \
     curl \
     dnsmasq-base \
@@ -19,6 +20,7 @@ RUN apt update && \
     netcat-openbsd \
     procps \
     python3 \
+    sudo \
     tcpdump \
     tmux \
     traceroute \
