@@ -32,4 +32,9 @@ RUN apt update && \
 RUN locale-gen ja_JP.UTF-8
 RUN echo export LANG=ja_JP.UTF-8 >> ~/.bashrc
 
+# tmux設定
+RUN echo "set-option -g mouse on\n\
+set -g terminal-overrides 'xterm*:smcup@:rmcup@'\n\
+" > ~/.tmux.conf
+
 WORKDIR /share
