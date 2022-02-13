@@ -28,7 +28,6 @@ RUN apt update && \
     vim \
     wget \
     xsel \
-  && apt-get clean \
   && apt autoremove && apt autoclean
 
 # confgを取得
